@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    /*
+     * Basic Options
+     */
+    "target": "es2018",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+
+    /*
+     * Module Resolution Options
+     */
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "_/*": [
+        "src/*",
+      ],
+    },
+
+    /*
+     * Source Map Options
+     */
+    "sourceMap": false,
+
+    /*
+     * Plugins
+     */
+    "plugins": [
+      {"name": "tslint-language-service"},
+    ],
+  },
+
+  "include": [
+    "src/**/*.ts",
+  ],
+
+  "exclude": [
+    "node_modules",
+  ],
+
+  "compileOnSave": false,
+}

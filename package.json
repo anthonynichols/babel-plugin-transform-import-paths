@@ -1,0 +1,65 @@
+{
+  "name": "babel-plugin-transform-import-paths",
+  "version": "0.0.0",
+  "description": "Babel plugin to transform import paths",
+  "keywords": [
+    "babel",
+    "plugin",
+    "transform",
+    "import",
+    "paths"
+  ],
+  "author": {
+    "name": "Anthony Nichols",
+    "email": "hi@anthonynichols.me"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonynichols/babel-plugin-transform-import-paths.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anthonynichols/babel-plugin-transform-import-paths/issues"
+  },
+  "homepage": "https://github.com/anthonynichols/babel-plugin-transform-import-paths#readme",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/transform-import-paths",
+  "scripts": {
+    "build": "tsc",
+    "release:major": "npm version major && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:patch": "npm version patch && npm publish",
+    "test": "jest"
+  },
+  "dependencies": {
+    "slash": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/types": "^7.0.0-beta.49",
+    "@types/babel-types": "^7.0.2",
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.3.0",
+    "babel-jest": "^23.0.1",
+    "import-sort-style-alexandria": "^2.0.0",
+    "jest": "^23.1.0",
+    "jest-config": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.1.0",
+    "tslint": "^5.10.0",
+    "tslint-language-service": "^0.9.9",
+    "typescript": "^2.9.1"
+  },
+  "importSort": {
+    ".js, .spec.js": {
+      "parser": "babylon",
+      "style": "alexandria"
+    },
+    ".ts": {
+      "parser": "typescript",
+      "style": "alexandria"
+    }
+  }
+}
