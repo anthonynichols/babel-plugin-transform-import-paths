@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-import-paths",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Babel plugin to transform import paths",
   "keywords": [
     "babel",
@@ -37,20 +37,21 @@
     "slash": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.49",
-    "@babel/types": "^7.0.0-beta.49",
-    "@types/babel-types": "^7.0.2",
-    "@types/jest": "^23.0.0",
-    "@types/node": "^10.3.0",
-    "babel-jest": "^23.0.1",
+    "@babel/core": "^7.4.0",
+    "@babel/traverse": "^7.4.0",
+    "@babel/types": "^7.4.0",
+    "@types/babel-types": "^7.0.6",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.11.7",
+    "babel-jest": "^24.5.0",
     "import-sort-style-alexandria": "^2.0.0",
-    "jest": "^23.1.0",
-    "jest-config": "^23.1.0",
-    "ts-jest": "^22.4.6",
-    "ts-node": "^6.1.0",
+    "jest": "^24.5.0",
+    "jest-config": "^24.5.0",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.3",
     "tslint": "^5.10.0",
     "tslint-language-service": "^0.9.9",
-    "typescript": "^2.9.1"
+    "typescript": "^3.3.4000"
   },
   "importSort": {
     ".js, .spec.js": {

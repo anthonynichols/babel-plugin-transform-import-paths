@@ -1,13 +1,12 @@
-import path from 'path';
-import slash from 'slash';
-import Types, {Expression, Identifier} from 'babel-types';
-import {transformFileSync, transformSync} from '@babel/core';
-import {Visitor} from 'babel-traverse';
+import Types, {Identifier} from '@babel/types';
+import {Visitor} from '@babel/traverse';
 
 import {getArg, getPath} from './helpers';
 
-export default function ({types: t}: {types: typeof Types}) {
-  const visitor: Visitor = {
+type PluginTypes = {types: typeof Types};
+
+export default function ({types: t}: PluginTypes) {
+  const visitor: Visitor<any> = {
     CallExpression(path, state) {
       if ((path.node.callee as Identifier).name !== 'require') return;
 
@@ -15,7 +14,7 @@ export default function ({types: t}: {types: typeof Types}) {
 
       if (!args.length) return;
 
-      const firstArg = getArg(t, (args[0] as Expression));
+      const firstArg = getArg(t, args[0]);
 
       if (firstArg) {
         firstArg.value = getPath(firstArg.value, state.opts, state.file.opts.filename);

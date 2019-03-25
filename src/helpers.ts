@@ -1,8 +1,8 @@
 import path from 'path';
 import slash from 'slash';
-import Types, {CallExpression, Expression} from 'babel-types';
+import Types from '@babel/types';
 
-export function getArg(t: typeof Types, arg: CallExpression['arguments'] | Expression) {
+export function getArg(t: typeof Types, arg: object) {
   if (t.isStringLiteral(arg)) {
     return arg;
   }
