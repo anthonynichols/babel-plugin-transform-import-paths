@@ -3,7 +3,7 @@
     /*
      * Basic Options
      */
-    "target": "es2018",
+    "target": "es2020",
     "outDir": "./dist",
     "rootDir": "./src",
     "removeComments": true,
@@ -13,33 +13,15 @@
      */
     "module": "commonjs",
     "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "_/*": [
-        "src/*",
-      ],
-    },
-
     /*
      * Source Map Options
      */
     "sourceMap": false,
-
-    /*
-     * Plugins
-     */
-    "plugins": [
-      {"name": "tslint-language-service"},
-    ],
   },
+
+  "compileOnSave": false,
 
   "include": [
     "src/**/*.ts",
   ],
-
-  "exclude": [
-    "node_modules",
-  ],
-
-  "compileOnSave": false,
 }
